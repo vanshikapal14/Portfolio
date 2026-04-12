@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanshika Pal — Portfolio</title>
+  <meta name="description"
+    content="Vanshika Pal's personal portfolio — a creative developer passionate about building beautiful, functional digital experiences.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- ===================== NAVIGATION ===================== -->
+  <header id="navbar" class="navbar">
+    <div class="container navbar__inner">
+      <a href="#" class="navbar__logo" aria-label="Home">
+        <img src="assets/images/logo.png" alt="VP Logo" class="logo__img">
+        <span class="logo__text">Vanshika.</span>
+      </a>
+
+      <nav class="navbar__links" id="navLinks">
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+        <a href="#contact" class="btn btn--nav-cta" data-section="contact">Get in Touch</a>
+      </nav>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section id="home" class="hero hero--light">
+    <div class="container hero__content">
+      <div class="hero__left">
+        <div class="hero__role-label">
+          <span class="role-label__line"></span>
+          <span class="role-label__text">Frontend Developer & iOS Developer</span>
+        </div>
+        <h1 class="hero__title">
+          Hi, I'm<br><span class="title__name">Vanshika Pal</span>
+        </h1>
+        <p class="hero__description">
+          I build clean, responsive, and user-friendly digital experiences
+          with a focus on <strong>frontend development</strong> and <strong>iOS applications</strong>.
+        </p>
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--dark">
+            View My Work
+          </a>
+          <a href="#" class="btn btn--outline-dark">
+            <i data-lucide="download" class="btn__icon"></i>
+            Download CV
+          </a>
+        </div>
+        <div class="hero__social-row">
+          <span class="social-row__label">Follow me</span>
+          <a href="https://github.com/vanshikapal14" target="_blank" rel="noopener noreferrer"
+            class="hero-social hero-social--light" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+              <path d="M9 18c-4.51 2-5-2-7-2" />
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/vanshikapal14" target="_blank" rel="noopener noreferrer"
+            class="hero-social hero-social--light" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect width="4" height="12" x="2" y="9" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+          <a href="mailto:vanshikapal451@gmail.com" class="hero-social hero-social--light" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero__right">
+        <div class="hero__image-wrapper hero__image-wrapper--light">
+          <img src="assets/images/profile.png" alt="Vanshika Pal" class="hero__image hero__image--light">
+          <div class="hero__dots-decoration"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator hero__scroll-indicator--light">
+      <span>SCROLL</span>
+      <i data-lucide="arrow-down" class="scroll-arrow"></i>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT SECTION ===================== -->
+  <section id="about" class="about--light section">
+    <div class="container">
+      <div class="section-label">
+        <span class="label__line"></span>
+        <span class="label__text">About Me</span>
+      </div>
+      <h2 class="section-heading">A developer who loves<br>building things that matter.</h2>
+
+      <div class="about-light__grid">
+        <div class="about-light__bio">
+          <p>Hi, I'm <strong>Vanshika Pal</strong>, a passionate frontend and iOS developer based in
+            <strong>Noida, Uttar Pradesh</strong>. I am currently pursuing my B.Tech in Computer Science
+            and Engineering and enjoy building intuitive, user-friendly applications.
+          </p>
+          <p class="about-light__bio-secondary">I focus on writing clean code, creating responsive designs,
+            and continuously improving my development skills. I am highly motivated to learn new
+            technologies and solve real-world problems through technology.</p>
+        </div>
+
+        <div class="about-light__education">
+          <h3 class="education__heading"><i data-lucide="graduation-cap" class="education__icon"></i> EDUCATION</h3>
+          <div class="education__timeline">
+            <div class="education__item">
+              <div class="education__dot"></div>
+              <span class="education__years">2023 – 2027</span>
+              <h4 class="education__degree">B.Tech in Computer Science and Engineering</h4>
+              <p class="education__school">Galgotias University, Greater Noida</p>
+              <span class="education__score">CGPA: 9.08</span>
+            </div>
+            <div class="education__item">
+              <div class="education__dot"></div>
+              <span class="education__years">Intermediate</span>
+              <h4 class="education__degree">Gyan Deep Public School, Shikohabad, Uttar Pradesh</h4>
+              <span class="education__score">Percentage: 89.6%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills & Proficiency -->
+      <div class="skills-proficiency">
+        <div class="section-label">
+          <span class="label__line"></span>
+          <span class="label__text">Skills & Proficiency</span>
+        </div>
+        <div class="skills-cards">
+          <div class="skill-card">
+            <div class="skill-card__header">
+              <i data-lucide="code-2" class="skill-card__icon"></i>
+              <h4 class="skill-card__title">Frontend</h4>
+            </div>
+            <div class="skill-bar"><span class="skill-bar__label">HTML & CSS</span><span
+                class="skill-bar__pct">85%</span>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" style="width:85%"></div>
+              </div>
+            </div>
+            <div class="skill-bar"><span class="skill-bar__label">JavaScript</span><span
+                class="skill-bar__pct">75%</span>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" style="width:75%"></div>
+              </div>
+            </div>
+            <div class="skill-bar"><span class="skill-bar__label">React.js</span><span class="skill-bar__pct">65%</span>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" style="width:65%"></div>
+              </div>
+            </div>
+            <div class="skill-bar"><span class="skill-bar__label">Tailwind CSS</span><span
+                class="skill-bar__pct">80%</span>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" style="width:80%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__header">
+              <i data-lucide="smartphone" class="skill-card__icon"></i>
+              <h4 class="skill-card__title">iOS Development</h4>
+            </div>
+            <div class="skill-bar"><span class="skill-bar__label">Swift</span><span class="skill-bar__pct">60%</span>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" style="width:60%"></div>
+              </div>
+            </div>
+            <div class="skill-bar"><span class="skill-bar__label">SwiftUI</span><span class="skill-bar__pct">55%</span>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" style="width:55%"></div>
+              </div>
+            </div>
+            <div class="skill-bar"><span class="skill-bar__label">Xcode</span><span class="skill-bar__pct">75%</span>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" style="width:75%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__header">
+              <i data-lucide="server" class="skill-card__icon"></i>
+              <h4 class="skill-card__title">Backend (Basic)</h4>
+            </div>
+            <div class="skill-bar"><span class="skill-bar__label">Node.js</span><span class="skill-bar__pct">45%</span>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" style="width:45%"></div>
+              </div>
+            </div>
+            <div class="skill-bar"><span class="skill-bar__label">Firebase</span><span class="skill-bar__pct">50%</span>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" style="width:50%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__header">
+              <i data-lucide="wrench" class="skill-card__icon"></i>
+              <h4 class="skill-card__title">Tools</h4>
+            </div>
+            <div class="skill-bar"><span class="skill-bar__label">Git & GitHub</span><span
+                class="skill-bar__pct">75%</span>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" style="width:75%"></div>
+              </div>
+            </div>
+            <div class="skill-bar"><span class="skill-bar__label">Figma</span><span class="skill-bar__pct">65%</span>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" style="width:65%"></div>
+              </div>
+            </div>
+            <div class="skill-bar"><span class="skill-bar__label">VS Code</span><span class="skill-bar__pct">90%</span>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" style="width:90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS SECTION ===================== -->
+  <section id="projects" class="projects--light section">
+    <div class="container">
+      <div class="projects-light__header">
+        <div>
+          <div class="section-label">
+            <span class="label__line"></span>
+            <span class="label__text">Selected Work</span>
+          </div>
+          <h2 class="section-heading">Projects I'm<br>Proud Of</h2>
+        </div>
+        <p class="projects-light__subtitle">A curated selection of work across product design, engineering, and brand
+          identity.</p>
+      </div>
+
+      <!-- Project grid — 4 horizontal cards -->
+      <div class="pf-grid pf-grid--4col">
+
+        <!-- Card 1: SleepSense -->
+        <article class="pf-card">
+          <div class="pf-card__body">
+            <span class="pf-card__category">iOS App</span>
+            <h3 class="pf-card__title">SleepSense</h3>
+            <p class="pf-card__desc">A sleep tracking app that helps you improve your sleep quality and build better
+              rest habits.</p>
+            <div class="pf-card__tags">
+              <span class="pf-tag">Swift</span>
+              <span class="pf-tag">SwiftUI</span>
+            </div>
+          </div>
+          <div class="pf-card__footer">
+            <span class="pf-card__view-label">View project</span>
+            <a href="https://github.com/vanshikapal14/SleepSense-iOSApp" class="pf-card__view-link"
+              aria-label="View SleepSense project">
+              <span class="pf-arrow">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 2: Avello -->
+        <article class="pf-card">
+          <div class="pf-card__body">
+            <span class="pf-card__category">iOS App</span>
+            <h3 class="pf-card__title">Avello</h3>
+            <p class="pf-card__desc">Avello is an iOS productivity app for adults (18–25) with ADHD, targeting the
+              Indian market. The app adapts to the user, never the other way around.</p>
+            <div class="pf-card__tags">
+              <span class="pf-tag">Swift</span>
+              <span class="pf-tag">SwiftUI</span>
+            </div>
+          </div>
+          <div class="pf-card__footer">
+            <span class="pf-card__view-label">View project</span>
+            <a href="https://github.com/jyotiraditya-chauhan/Avello" class="pf-card__view-link"
+              aria-label="View Avello project">
+              <span class="pf-arrow">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 3: TaskFlow Pro -->
+        <article class="pf-card">
+          <div class="pf-card__body">
+            <span class="pf-card__category">Full Stack</span>
+            <h3 class="pf-card__title">TaskFlow Pro</h3>
+            <p class="pf-card__desc">A kanban-style task management dashboard with drag &amp; drop, progress tracking, and
+              team collaboration features.</p>
+            <div class="pf-card__tags">
+              <span class="pf-tag">React</span>
+              <span class="pf-tag">Node.js</span>
+              <span class="pf-tag">MongoDB</span>
+            </div>
+          </div>
+          <div class="pf-card__footer">
+            <span class="pf-card__view-label">View project</span>
+            <a href="https://github.com/vanshikapal14/Task-Manager" class="pf-card__view-link"
+              aria-label="View TaskFlow Pro project">
+              <span class="pf-arrow">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 4: NexusAI Chatbot -->
+        <article class="pf-card">
+          <div class="pf-card__body">
+            <span class="pf-card__category">AI / SaaS</span>
+            <h3 class="pf-card__title">NexusAI Chatbot</h3>
+            <p class="pf-card__desc">An AI-powered chatbot interface with conversation history, real-time streaming
+              responses, and a clean UI.</p>
+            <div class="pf-card__tags">
+              <span class="pf-tag">Python</span>
+              <span class="pf-tag">React</span>
+              <span class="pf-tag">OpenAI</span>
+            </div>
+          </div>
+          <div class="pf-card__footer">
+            <span class="pf-card__view-label">View project</span>
+            <a href="#" class="pf-card__view-link" aria-label="View NexusAI project">
+              <span class="pf-arrow">↗</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT SECTION ===================== -->
+  <section id="contact" class="contact--light section">
+    <div class="container">
+      <div class="contact-light__grid">
+        <div class="contact-light__info">
+          <div class="section-label">
+            <span class="label__line"></span>
+            <span class="label__text">Get in Touch</span>
+          </div>
+          <h2 class="section-heading">Let's build something<br>amazing together.</h2>
+          <p class="contact-light__desc">Whether you have a project in mind, want to collaborate, or just want to say hi
+            — I'd love to hear from you.</p>
+
+          <div class="contact-light__details">
+            <div class="contact-detail">
+              <div class="contact-detail__icon"><i data-lucide="mail"></i></div>
+              <div>
+                <span class="contact-detail__label">Email</span>
+                <p class="contact-detail__value">vanshikapal451@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail__icon"><i data-lucide="map-pin"></i></div>
+              <div>
+                <span class="contact-detail__label">Location</span>
+                <p class="contact-detail__value">Noida, Uttar Pradesh, India</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-light__form" id="contactForm" novalidate>
+          <div class="cl-form-row">
+            <div class="cl-form-group">
+              <label for="name" class="cl-label">Name</label>
+              <input type="text" id="name" name="name" class="cl-input" placeholder="Your name" required>
+            </div>
+            <div class="cl-form-group">
+              <label for="email" class="cl-label">Email</label>
+              <input type="email" id="email" name="email" class="cl-input" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="cl-form-group">
+            <label for="message" class="cl-label">Message</label>
+            <textarea id="message" name="message" class="cl-input cl-textarea"
+              placeholder="Tell me about your project..." rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--dark btn--full" id="submitBtn">
+            <i data-lucide="send" class="btn__icon"></i>
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer--light">
+    <div class="container footer-light__inner">
+      <p class="footer-light__copy">&copy; 2026 Vanshika Pal. All rights reserved.</p>
+      <div class="footer-light__socials">
+        <a href="https://github.com/vanshikapal14" target="_blank" rel="noopener noreferrer" class="footer-light__link"
+          aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+            <path d="M9 18c-4.51 2-5-2-7-2" />
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/vanshikapal14" target="_blank" rel="noopener noreferrer"
+          class="footer-light__link" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect width="4" height="12" x="2" y="9" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
